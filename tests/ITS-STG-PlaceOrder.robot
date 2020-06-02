@@ -22,7 +22,7 @@ ITS_PDPPage
 	ClickText           ADD TO CART             anchor=Y1004
 ITS_YourShoppingCartPopub	
 	# Some basic verifications:
-	VerifyTexts         Description: 2 x 1/2 gallons, $39.99, 35, $399.90, View Cart (10)
+	VerifyTexts         Description: 2 x 1/2 gallons, $39.99, 10, $399.90, View Cart (10)
 	# Get Subtotal to variable.. We only want text after * : -chars
 	${SUBTOTAL}         GetText         Estimated SUBTOTAL      between=* :???
 	# and check that it's expected:
