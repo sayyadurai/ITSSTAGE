@@ -55,13 +55,13 @@ ITS_ShippingAddressPage
 	ClickCheckbox       I agree         off
 	# Verify it's off
 	VerifyCheckboxValue  I agree        off
-	TypeText		Address         22382 Avenida Empresa
 	# Verify Country Dropdown
-	#VerifySelectedOption r1Country/c?	  United States
+	#VerifySelectedOption		r1Country/c?		United States
+	TypeText	Address			2352 Test Street
 	TypeText            City           New York
 	DROPDOWN            shippingAddress_state          California
 	TypeText           Zip/Postal Code  55632
-	ClickCheckbox      Also My Billing Address     on
+	ClickCheckbox		Also My Billing Address		on
 	TypeText         Telephone        1234567890
 	ClickText           CONTINUE
 ITS_PaymentDetailsSection
