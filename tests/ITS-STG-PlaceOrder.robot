@@ -57,9 +57,9 @@ ITS_ShippingAddressPage
 	VerifyCheckboxValue  I agree        off
 	TypeText            Address         22382 Avenida Empresa
 	# Verify Country Dropdown
-	VerifySelectedOption Country	  United States
+	VerifySelectedOption shippingAddress_country	  United States
 	TypeText            City           New York
-	DROPDOWN            State          California
+	DROPDOWN            shippingAddress_state          California
 	TypeText           Zip/Postal Code  55632
 	ClickCheckbox      Also My Billing Address     on
 	TypeText         Telephone        1234567890
