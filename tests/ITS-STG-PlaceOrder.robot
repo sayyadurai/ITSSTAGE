@@ -89,6 +89,7 @@ ITS_ReviewOrderPage
 	ShouldBeEqual       $442.73       ${ORDERTOTAL}
 	ClickText	PLACE ORDER
 	VerifyTexts	Your Order is Processing
+ITS_ThankyouPage
 	VerifyTexts	Thank you for your order!
 	${ORDERID}	GetText		Your Order ID is	between=???
 	
