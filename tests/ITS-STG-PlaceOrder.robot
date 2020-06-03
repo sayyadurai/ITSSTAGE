@@ -62,8 +62,8 @@ ITS_ShippingAddressPage
 	TypeText            City           New York
 	DROPDOWN            shippingAddress_state          California
 	TypeText           Zip/Postal Code  55632
-	ClickCheckbox		Also My		on
-	VerifyCheckboxValue	Also My		on
+	ClickCheckbox		shippingAddressAsBilling		on
+	VerifyCheckboxValue	shippingAddressAsBilling		on
 	TypeText         Telephone        1234567890
 	ClickText           CONTINUE
 ITS_PaymentDetailsSection
