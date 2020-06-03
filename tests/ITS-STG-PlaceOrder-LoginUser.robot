@@ -9,7 +9,6 @@ Suite Teardown       End suite
 
 ITS_HomePage
     [tags]              playing
-    	Run Keyword For		'int i=1;i<200;i++'
 	Appstate       	    Frontpage
 	LogScreenshot
 	HoverText      	    Chemicals
