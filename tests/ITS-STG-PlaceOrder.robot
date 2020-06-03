@@ -10,20 +10,21 @@ Suite Teardown       End suite
 ITS_HomePage
     [tags]              playing
 	Appstate       	    Frontpage
+	LogScreenshot
 	HoverText      	    Chemicals
 	ClickText      	    Pool Algaecides
-	LogScreenshot
 ITS_PLPPage
-	ClickText           In The Swim Pool Algaecide
 	LogScreenshot
+	ClickText           In The Swim Pool Algaecide
 ITS_PDPPage	
 	# Verify that quantity for item Y1004 is 1.. Use item nro as anchor
 	VerifyInputValue    QTY:            1       anchor=Y1004
 	# Buy 10 and add to cart:
 	TypeText            QTY:            10      anchor=Y1004
-	ClickText           ADD TO CART             anchor=Y1004
 	LogScreenshot
+	ClickText           ADD TO CART             anchor=Y1004
 ITS_YourShoppingCartPopub	
+	LogScreenshot
 	# Some basic verifications:
 	VerifyTexts         Description: 2 x 1/2 gallons, $39.99, 10, $399.90, View Cart (10)
 	# Get Subtotal to variable.. We only want text after * : -chars
@@ -31,10 +32,10 @@ ITS_YourShoppingCartPopub
 	# and check that it's expected:
 	ShouldBeEqual       $399.90       ${SUBTOTAL}
 	ClickText           View Cart
-	LogScreenshot
 	# Table elements can be handle as is if we want to be specific
 	# Pick table instance using some text that are inside of it
 ITS_ShoppingCartPage	
+	LogScreenshot
 	UseTable            Description
 	# Verify things from table..  r?xxx/c? = row that contains given text, cell 2
 	VerifyTable         r?Y1004/c2      In The Swim Pool Algaecide*
@@ -48,11 +49,10 @@ ITS_ShoppingCartPage
 	# ..Let's compare saved total to subtotal we saved earlier:
 	ShouldBeEqual       ${TOTAL}        ${SUBTOTAL}
 	# Checkout, give invalid email and try to proceed:
-	LogScreenshot
 	ClickText           CHECK OUT
-ITS_SecureCheckoutPage	
-	ClickText           GUEST CHECKOUT
+ITS_SecureCheckoutPage
 	LogScreenshot
+	ClickText           GUEST CHECKOUT
 ITS_ShippingAddressPage	
 	TypeText	First Name	ITS
 	TypeText	Last Name	TEST
@@ -71,8 +71,8 @@ ITS_ShippingAddressPage
 	ClickCheckbox		shippingAddressAsBilling		on
 	VerifyCheckboxValue	shippingAddressAsBilling		on
 	TypeText         Telephone        1234567890
-	ClickText           CONTINUE
 	LogScreenshot
+	ClickText           CONTINUE
 ITS_PaymentDetailsSection
 	VerifyText	Payment Details
 	DROPDOWN        billing_creditCartType		visa
@@ -82,9 +82,10 @@ ITS_PaymentDetailsSection
 	TypeText	CVV/Security Code	123
 	DROPDOWN	billing_expirationDate		06-Jun
 	DROPDOWN	billing_expirationYear		2021
-	ClickText	REVIEW ORDER
 	LogScreenshot
+	ClickText	REVIEW ORDER
 ITS_ReviewOrderPage
+	LogScreenshot
 	VerifyTexts	ITEMS IN ORDER
 	UseTable            Description
 	VerifyTable         r?Y1004/c2      In The Swim Pool Algaecide*
@@ -93,7 +94,7 @@ ITS_ReviewOrderPage
 	VerifyTable	r?Y1004/c5	$399.90
 	GetTableRow	Your Order Total
 	ClickText	PLACE ORDER
-	LogScreenshot
+	LogScrenshot
 ITS_ThankyouPage
 	VerifyTexts	Thank you for your order!
 	${ORDERID}	GetText		Your Order ID is	between=???
