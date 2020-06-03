@@ -68,12 +68,13 @@ ITS_ShippingAddressPage
 	ClickText           CONTINUE
 ITS_PaymentDetailsSection
 	VerifyText	Payment Details
-	DROPDOWN        Choose Card Type	Visa
+	DROPDOWN        billing_creditCartType		Visa
+	VerifySelectedOption	billing_creditCartType		Visa
 	TypeText	Card Number	4263982640269299
 	TypeText	Name On Card	TestCard
 	TypeText	CVV/Security Code	123
-	DROPDOWN	Month			06-Jun
-	DROPDOWN	Year			2021
+	DROPDOWN	billing_expirationDate		06-Jun
+	DROPDOWN	billing_expirationYear		2021
 	ClickText	REVIEW ORDER
 ITS_ReviewOrderPage
 	VerifyTexts	ITEMS IN ORDER
