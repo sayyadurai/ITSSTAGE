@@ -68,8 +68,8 @@ ITS_ShippingAddressPage
 	ClickText           CONTINUE
 ITS_PaymentDetailsSection
 	VerifyText	Payment Details
-	DROPDOWN        billing_creditCartType		Visa
-	VerifySelectedOption	billing_creditCartType		Visa
+	DROPDOWN        billing_creditCartType		visa
+	VerifySelectedOption	billing_creditCartType		visa
 	TypeText	Card Number	4263982640269299
 	TypeText	Name On Card	TestCard
 	TypeText	CVV/Security Code	123
