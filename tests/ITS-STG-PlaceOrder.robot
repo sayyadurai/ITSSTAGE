@@ -88,7 +88,7 @@ ITS_ReviewOrderPage
 	# Get OrderTotal to variable.
 	${ORDERTOTAL}         GetText         Your Order Total      between=???
 	# and check that it's expected:
-	ShouldBeEqual       $442.73       ${ORDERTOTAL}
+	ShouldBeEqual       $435.54       ${ORDERTOTAL}
 	ClickText	PLACE ORDER
 	VerifyTexts	Your Order is Processing
 ITS_ThankyouPage
