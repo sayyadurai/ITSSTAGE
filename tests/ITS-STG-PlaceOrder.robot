@@ -9,6 +9,7 @@ Suite Teardown       End suite
 
 ITS_HomePage
     [tags]              playing
+    for(int i=1;i<5;i++){
 	Appstate       	    Frontpage
 	LogScreenshot
 	HoverText      	    Chemicals
@@ -92,14 +93,14 @@ ITS_ReviewOrderPage
 	VerifyTable         r?Y1004/c3      $39.99
 	VerifyTable         r?Y1004/c4      10
 	VerifyTable	r?Y1004/c5	$399.90
-	GetTableRow	Your Order Total
+	#GetTableRow	Your Order Total
 	ClickText	PLACE ORDER
 	LogScrenshot
 ITS_ThankyouPage
 	VerifyTexts	Thank you for your order!
 	${ORDERID}	GetText		Your Order ID is	between=???
 	LogScreenshot
-	
+	}
 	
 
 
