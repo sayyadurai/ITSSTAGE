@@ -52,6 +52,39 @@ ITS_ShoppingCartPage
 	ClickText           CHECK OUT
 ITS_SecureCheckoutPage
 	LogScreenshot
-	TypeText           j_username   maaritest1@gmail.com
-  TypeText           password     maari@1
-  ClickText          LOGIN AND CHECKOUT
+	TypeText           j_username   rsivakumar@dss-partners.com
+  	TypeText           password     123123
+  	LogScreenshot
+  	ClickText          LOGIN AND CHECKOUT
+ITS_LoginUser_ShippingAddressPage
+	LogScreenshot
+	VerifyText	SHIPPING ADDRESS
+	ClickText	SHIP TO THIS ADDRESS
+ITS_LoginUser_PaymentDetailsPage
+	VerifyText	Payment Details
+	DROPDOWN        billing_creditCartType		visa
+	#VerifySelectedOption	billing_creditCartType		visa
+	TypeText	Card Number	4263982640269299
+	TypeText	Name On Card	TestCard
+	TypeText	CVV/Security Code	123
+	DROPDOWN	billing_expirationDate		06-Jun
+	DROPDOWN	billing_expirationYear		2021
+	LogScreenshot
+	ClickText	REVIEW ORDER
+ITS_LoginUser_ReviewOrderPage
+	LogScreenshot
+	VerifyTexts	ITEMS IN ORDER
+	UseTable            Description
+	VerifyTable         r?Y1004/c2      In The Swim Pool Algaecide*
+	VerifyTable         r?Y1004/c3      $39.99
+	VerifyTable         r?Y1004/c4      10
+	VerifyTable	r?Y1004/c5	$399.90
+	UseTable            DISCOUNT
+	GetTableRow	Your Order Total
+	ClickText	PLACE ORDER
+	LogScrenshot
+ITS_LoginUser_ThankyouPage
+	VerifyTexts	Thank you for your order!
+	${ORDERID}	GetText		Your Order ID is	between=???
+	LogScreenshot
+	
