@@ -12,14 +12,17 @@ ITS_HomePage
 	Appstate       	    Frontpage
 	HoverText      	    Chemicals
 	ClickText      	    Pool Algaecides
+	LogScreenshot
 ITS_PLPPage
 	ClickText           In The Swim Pool Algaecide
+	LogScreenshot
 ITS_PDPPage	
 	# Verify that quantity for item Y1004 is 1.. Use item nro as anchor
 	VerifyInputValue    QTY:            1       anchor=Y1004
 	# Buy 10 and add to cart:
 	TypeText            QTY:            10      anchor=Y1004
 	ClickText           ADD TO CART             anchor=Y1004
+	LogScreenshot
 ITS_YourShoppingCartPopub	
 	# Some basic verifications:
 	VerifyTexts         Description: 2 x 1/2 gallons, $39.99, 10, $399.90, View Cart (10)
@@ -28,6 +31,7 @@ ITS_YourShoppingCartPopub
 	# and check that it's expected:
 	ShouldBeEqual       $399.90       ${SUBTOTAL}
 	ClickText           View Cart
+	LogScreenshot
 	# Table elements can be handle as is if we want to be specific
 	# Pick table instance using some text that are inside of it
 ITS_ShoppingCartPage	
@@ -44,9 +48,11 @@ ITS_ShoppingCartPage
 	# ..Let's compare saved total to subtotal we saved earlier:
 	ShouldBeEqual       ${TOTAL}        ${SUBTOTAL}
 	# Checkout, give invalid email and try to proceed:
+	LogScreenshot
 	ClickText           CHECK OUT
 ITS_SecureCheckoutPage	
 	ClickText           GUEST CHECKOUT
+	LogScreenshot
 ITS_ShippingAddressPage	
 	TypeText	First Name	ITS
 	TypeText	Last Name	TEST
@@ -66,6 +72,7 @@ ITS_ShippingAddressPage
 	VerifyCheckboxValue	shippingAddressAsBilling		on
 	TypeText         Telephone        1234567890
 	ClickText           CONTINUE
+	LogScreenshot
 ITS_PaymentDetailsSection
 	VerifyText	Payment Details
 	DROPDOWN        billing_creditCartType		visa
@@ -76,6 +83,7 @@ ITS_PaymentDetailsSection
 	DROPDOWN	billing_expirationDate		06-Jun
 	DROPDOWN	billing_expirationYear		2021
 	ClickText	REVIEW ORDER
+	LogScreenshot
 ITS_ReviewOrderPage
 	VerifyTexts	ITEMS IN ORDER
 	UseTable            Description
@@ -83,16 +91,13 @@ ITS_ReviewOrderPage
 	VerifyTable         r?Y1004/c3      $39.99
 	VerifyTable         r?Y1004/c4      10
 	VerifyTable	r?Y1004/c5	$399.90
-	# Get tell text to variable..:
-	${TOTAL}            GetCellText     r?Y1004/c5
-	# Get OrderTotal to variable.
-	${ORDERTOTAL}         GetText         review-total heading-6
-	# and check that it's expected:
-	#ShouldBeEqual       $435.54       ${ORDERTOTAL}
+	GetTableRow	Your Order Total
 	ClickText	PLACE ORDER
+	LogScreenshot
 ITS_ThankyouPage
 	VerifyTexts	Thank you for your order!
 	${ORDERID}	GetText		Your Order ID is	between=???
+	LogScreenshot
 	
 	
 
