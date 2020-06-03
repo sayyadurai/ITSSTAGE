@@ -82,8 +82,7 @@ ITS_ReviewOrderPage
 	VerifyTable         r?Y1004/c2      In The Swim Pool Algaecide*
 	VerifyTable         r?Y1004/c3      $39.99
 	VerifyTable         r?Y1004/c4      10
-	VerifyInputValue    r?Y1004/c5      $399.90
-	VerifyTable        r?Y1004/c6       $399.90
+	VerifyTable	r?Y1004/c5	$399.90
 	# Get tell text to variable..:
 	${TOTAL}            GetCellText     r?Y1004/c5
 	# Get OrderTotal to variable.
