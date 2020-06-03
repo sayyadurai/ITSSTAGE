@@ -9,7 +9,7 @@ Suite Teardown       End suite
 
 ITS_HomePage
     [tags]              playing
-    for(int i=1;i<5;i++){
+    	Run Keyword For		'int i=1;i<200;i++'
 	Appstate       	    Frontpage
 	LogScreenshot
 	HoverText      	    Chemicals
@@ -100,7 +100,7 @@ ITS_ThankyouPage
 	VerifyTexts	Thank you for your order!
 	${ORDERID}	GetText		Your Order ID is	between=???
 	LogScreenshot
-	}
+	
 	
 
 
