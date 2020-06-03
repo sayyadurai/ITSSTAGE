@@ -94,7 +94,6 @@ ITS_ReviewOrderPage
 	VerifyTable	r?Y1004/c5	$399.90
 	#GetTableRow	Your Order Total
 	ClickText	PLACE ORDER
-	LogScrenshot
 ITS_ThankyouPage
 	VerifyTexts	Thank you for your order!
 	${ORDERID}	GetText		Your Order ID is	between=???
