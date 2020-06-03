@@ -86,7 +86,7 @@ ITS_ReviewOrderPage
 	# Get tell text to variable..:
 	${TOTAL}            GetCellText     r?Y1004/c5
 	# Get OrderTotal to variable.
-	${ORDERTOTAL}         GetText         //*[@id="confirmationform"]/div[3]/div[1]/div[3]/div[4]/div[2]/strong
+	#${ORDERTOTAL}         GetText         //*[@id="confirmationform"]/div[3]/div[1]/div[3]/div[4]/div[2]/strong
 	# and check that it's expected:
 	#ShouldBeEqual       $435.54       ${ORDERTOTAL}
 	ClickText	PLACE ORDER
