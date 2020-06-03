@@ -58,7 +58,7 @@ ITS_SecureCheckoutPage
   	ClickText          LOGIN AND CHECKOUT
 ITS_LoginUser_ShippingAddressPage
 	LogScreenshot
-	VerifyTexts	SHIPPING ADDRESS
+	VerifyTexts	Shipping Address
 	ClickText	SHIP TO THIS ADDRESS
 ITS_LoginUser_PaymentDetailsPage
 	VerifyText	Payment Details
