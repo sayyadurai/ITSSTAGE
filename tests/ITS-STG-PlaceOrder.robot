@@ -86,7 +86,7 @@ ITS_ReviewOrderPage
 	# Get tell text to variable..:
 	${TOTAL}            GetCellText     r?Y1004/c5
 	# Get OrderTotal to variable.
-	${ORDERTOTAL}         GetText         r?Your Order Total/c-1
+	${ORDERTOTAL}         GetText         review-total heading-6
 	# and check that it's expected:
 	#ShouldBeEqual       $435.54       ${ORDERTOTAL}
 	ClickText	PLACE ORDER
