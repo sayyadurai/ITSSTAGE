@@ -74,15 +74,7 @@ ITS_LoginUser_PaymentDetailsPage
 ITS_LoginUser_ReviewOrderPage
 	LogScreenshot
 	VerifyTexts	ITEMS IN ORDER
-	UseTable            Description
-	VerifyTable         r?Y1004/c2      In The Swim Pool Algaecide*
-	VerifyTable         r?Y1004/c3      $39.99
-	VerifyTable         r?Y1004/c4      10
-	VerifyTable	r?Y1004/c5	$399.90
-	UseTable            DISCOUNT
-	GetTableRow	Your Order Total
 	ClickText	PLACE ORDER
-	LogScrenshot
 ITS_LoginUser_ThankyouPage
 	VerifyTexts	Thank you for your order!
 	${ORDERID}	GetText		Your Order ID is	between=???
