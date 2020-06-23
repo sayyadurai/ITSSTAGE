@@ -60,6 +60,9 @@ ITS_LoginUser_ShippingAddressPage
 	LogScreenshot
 	VerifyTexts	Shipping Address
 	ClickText	SHIP TO THIS ADDRESS
+ITS_PaymentSelected
+	ClickCheckbox	paypal	on
+	VerifyCheckboxValue	paypal	on
 ITS_LoginUser_PaymentDetailsPage
 	VerifyText	Payment Details
 	DROPDOWN        billing_creditCartType		visa
