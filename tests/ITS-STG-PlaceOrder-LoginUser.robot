@@ -61,8 +61,8 @@ ITS_LoginUser_ShippingAddressPage
 	VerifyTexts	Shipping Address
 	ClickText	SHIP TO THIS ADDRESS
 ITS_PaymentSelected
-	ClickCheckbox	paypal	on
-	VerifyCheckboxValue	paypal	on
+	#ClickCheckbox	paypal	on
+	VerifyCheckboxValue	paypal	off
 ITS_LoginUser_PaymentDetailsPage
 	VerifyText	Payment Details
 	DROPDOWN        billing_creditCartType		visa
