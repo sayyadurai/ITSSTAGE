@@ -8,7 +8,7 @@ Suite Teardown       End suite
 *** Test Cases ***
 
 ITS_HomePage
-    [tags]              playing
+    [tags]              loginuser
 	Appstate       	    Frontpage
 	LogScreenshot
 	HoverText      	    Chemicals
