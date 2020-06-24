@@ -16,6 +16,9 @@ Setup Browser
 End suite
     Close All Browsers
     Sleep    2
+   
+Example Test
+	[tags]              playing
 
 Appstate
 	[Documentation]    Appstate handler
