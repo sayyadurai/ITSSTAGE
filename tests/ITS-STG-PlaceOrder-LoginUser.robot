@@ -8,14 +8,21 @@ Suite Teardown       End suite
 *** Test Cases ***
 
 ITS_HomePage
-    [tags]              loginuser
+    [tags]              Smoke
 	Appstate       	    Frontpage
 	LogScreenshot
 	HoverText      	    Chemicals
 	ClickText      	    Pool Algaecides
+
 ITS_PLPPage
+    [tags]              Regression
+    Appstate       	    Frontpage
+	HoverText      	    Chemicals
+	ClickText      	    Pool Algaecides
 	LogScreenshot
 	ClickText           In The Swim Pool Algaecide
+
+
 ITS_PDPPage	
 	# Verify that quantity for item Y1004 is 1.. Use item nro as anchor
 	VerifyInputValue    QTY:            1       anchor=Y1004
